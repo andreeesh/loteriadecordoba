@@ -13,11 +13,18 @@
         "source": "https://github.com/yiisoft/yii2"
     },
     "minimum-stability": "stable",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/sfedosimov/yii2-oci8pdo.git"
+        }
+    ],
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "~2.0.5",
         "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0"
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "sfedosimov/yii2-oci8pdo": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

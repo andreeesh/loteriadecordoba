@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0ae91dd49c8a7d0b85d596e662463df",
+    "content-hash": "883c1e80240c7ee0729bd2acea538038",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -313,6 +313,51 @@
                 "html"
             ],
             "time": "2017-06-03T02:28:16+00:00"
+        },
+        {
+            "name": "sfedosimov/yii2-oci8pdo",
+            "version": "v1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sfedosimov/yii2-oci8pdo.git",
+                "reference": "6add1d706ea70c96334b0b5892486ce685d4cd31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sfedosimov/yii2-oci8pdo/zipball/6add1d706ea70c96334b0b5892486ce685d4cd31",
+                "reference": "6add1d706ea70c96334b0b5892486ce685d4cd31",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "sfedosimov\\oci8pdo\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Fedosimov",
+                    "email": "sfedosimov@gmail.com"
+                }
+            ],
+            "description": "Emulation of the PDO driver by means of OCI8",
+            "keywords": [
+                "oci8",
+                "pdo",
+                "yii2"
+            ],
+            "support": {
+                "email": "sfedosimov@gmail.com",
+                "issues": "https://github.com/sfedosimov/yii2-oci8pdo/issues",
+                "source": "https://github.com/sfedosimov/yii2-oci8pdo/tree/v1.0.0.0"
+            },
+            "time": "2015-10-16T08:19:27+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
