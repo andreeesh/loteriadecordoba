@@ -13,4 +13,12 @@ class SiteController extends Controller
         $juegos=$modelJuegos->find()->all();
         return $this->render('index', array('juegos'=>$juegos));
     }
+
+    public function actionJuego($id)
+    {
+        $modelJuegos=new Juegos;
+        $juego=$modelJuegos->findOne(['IDJUEGO'=>$id]);
+        $params=array('juego'=>$juego);
+        return $this->render('juego', $params);
+    }
 }

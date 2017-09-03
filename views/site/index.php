@@ -1,5 +1,4 @@
 <?php $this->title = 'Lotería de Córdoba' ?>
-
 <div class="site-index">
 <ul>
 <?php 
