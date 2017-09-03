@@ -4,6 +4,7 @@ use Yii;
 use yii\web\Controller;
 use yii\web\Response;
 use app\models\Juegos;
+use app\models\Imagenes;
 
 class SiteController extends Controller
 {
@@ -17,8 +18,10 @@ class SiteController extends Controller
     public function actionJuego($id)
     {
         $modelJuegos=new Juegos;
+        $modelImagenes=new Imagenes;
         $juego=$modelJuegos->findOne(['IDJUEGO'=>$id]);
-        $params=array('juego'=>$juego);
+        $imagen=$modelImagenes->findOne(['IDSECCION'=>$juego["IDSECCION"]]);
+        $params=array('juego'=>$juego, 'imagen'=>$imagen);
         return $this->render('juego', $params);
     }
 }
