@@ -17,11 +17,18 @@ class SiteController extends Controller
 
     public function actionJuego($id)
     {
+    	$conn=Yii::$app->db;
         $modelJuegos=new Juegos;
         $modelImagenes=new Imagenes;
         $juego=$modelJuegos->findOne(['IDJUEGO'=>$id]);
         $imagen=$modelImagenes->findOne(['IDSECCION'=>$juego["IDSECCION"]]);
-        $params=array('juego'=>$juego, 'imagen'=>$imagen);
+
+		$querySorteos=$modelJuegos->getQuery($id, 'all', 0);
+        $queryUltimoSorteo=$modelJuegos->getQuery($id, 'max', 0);
+        $sorteos=$conn->createCommand($querySorteos)->queryAll();
+        $ultimoSorteo=$conn->createCommand($queryUltimoSorteo)->queryAll();
+
+        $params=array('juego'=>$juego, 'imagen'=>$imagen, 'sorteos'=>$sorteos, 'ultimoSorteo'=>$ultimoSorteo);
         return $this->render('juego', $params);
     }
 }
