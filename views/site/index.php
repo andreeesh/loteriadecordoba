@@ -1,3 +1,1 @@
-<?php
-$this->title = 'Lotería de Córdoba';
-?>
+<?php $this->title='Lotería de Córdoba' ?>
