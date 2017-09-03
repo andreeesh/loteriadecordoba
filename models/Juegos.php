@@ -15,3 +15,4 @@ class Juegos extends ActiveRecord
 	{
 		return 'JUEGOS';
 	}
+}
